@@ -1,0 +1,15 @@
+INCLUDEPATH += ../libs/Box2D
+LIBS += -L"../libs/Box2D/Build/Box2D"
+LIBS += -lBox2D
+
+Widget::Widget(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::Widget)
+{
+    ui->setupUi(this);
+}
+
+Widget::~Widget()
+{
+    delete ui;
+}
